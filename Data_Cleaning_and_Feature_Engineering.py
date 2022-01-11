@@ -459,9 +459,9 @@ text_df = rake.execute()
 
 from sklearn.decomposition import PCA
 
-pca = PCA(n_components=1)   #降到1维
-pca.fit(text_df.values)                  #训练
-newX=pca.fit_transform(text_df.values)   #降维后的数据
+pca = PCA(n_components=1)  
+pca.fit(text_df.values)                 
+newX=pca.fit_transform(text_df.values)   
 print(pca.explained_variance_ratio_)
 new_text_df = pd.DataFrame(newX)
 
